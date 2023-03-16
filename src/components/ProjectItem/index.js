@@ -1,14 +1,21 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
-const ProjectItem = ({ image, name, link }) => {
+const ProjectItem = ({ image, name, link, id }) => {
+  const navigate = useNavigate();
   return (
-    <a className="project-item" target="_blank" href={link} rel="noreferrer">
+    <div
+      className="project-item"
+      onClick={() => {
+        navigate("/project/" + id);
+      }}
+    >
       <div
         style={{ backgroundImage: `url(${image})` }}
         className="bg-image"
       ></div>
       <h1 className="project-title">{name}</h1>
-    </a>
+    </div>
   );
 };
 
