@@ -14,7 +14,7 @@
 }
 
 .project img {
-    width: 700px;
+    width: 70vh;
     border-radius: 10px;
 }
 
@@ -27,3 +27,24 @@
     font-size: 60px;
     color: #3e497a;
 }
+
+.click-me:hover {
+    box-shadow: 0px 3px 15px rgba(7, 0, 64, 0.5);
+    border-radius: 50%;
+    transition: 0.4s ease-in;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 800px) {
+    .project {
+        margin: 0em;
+    }
+    .project img {
+            width: 40vh;
+}
+.project p {
+    text-align:center;
+    margin: 2em;
+    font-size: 20px;
+    color: #3e497a;
+}}

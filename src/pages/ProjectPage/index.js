@@ -1,7 +1,7 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import { projectList } from "../../helpers/ProjectList";
-import { GitHub } from "@mui/icons-material";
+import { GitHub, Http } from "@mui/icons-material";
 import "./styles.css";
 
 const ProjectPage = () => {
@@ -14,7 +14,14 @@ const ProjectPage = () => {
       <p>
         <b>Skills:</b> {project.skills}
       </p>
-      <GitHub />
+      <a
+        className="click-me"
+        href={project.link}
+        target="_blank"
+        rel="noreferrer"
+      >
+        {project.type === "website" ? <Http /> : <GitHub />}
+      </a>
     </div>
   );
 };

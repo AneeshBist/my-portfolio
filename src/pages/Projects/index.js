@@ -12,6 +12,7 @@ const Projects = () => {
         {projectList.map((project, id) => {
           return (
             <ProjectItem
+              key={id}
               id={id}
               name={project.name}
               image={project.image}
